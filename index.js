@@ -73,6 +73,7 @@ app.post("/login", (req, res)=> {
       else {
        const hashedPassword = result[0].password
        //get the hashedPassword from result
+       
     if (await bcrypt.compare(password, hashedPassword)) {
         console.log("---------> Login Successful")
         console.log("---------> Generating accessToken")
